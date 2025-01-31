@@ -10,7 +10,7 @@
   <body>
     <!-- HEADER -->
     <nav>
-      <div class="bg-[#fcb900] sm:py-1 py-2 ff_cat">
+      <div class="bg-[#fcb900] sm:py-1 py-2 ff_cat px-5">
         <div
           class="container flex flex-col sm:flex-row justify-between sm:gap-5 mx-auto items-center"
         >
@@ -58,15 +58,15 @@
         </div>
       </div>
       <div class="bg-[#fdc62f] py-5">
-        <div class="container mx-auto flex justify-between items-center">
+        <div class="container mx-auto flex justify-between items-center px-5">
           <a href="/">
             <img
-              class="w-full max-w-[225px]"
+              class="w-full md:max-w-[225px] max-w-[125px]"
               src="./assets/img/logo.png"
               alt="logo"
             />
           </a>
-          <ul class="flex gap-5 items-center">
+          <ul class="hidden md:flex gap-5 items-center">
             <li>
               <a href="https://speedyskiphire.co.uk/"> Home </a>
             </li>
@@ -224,6 +224,194 @@
               </a>
             </li>
           </ul>
+          <div class="md:hidden">
+            <div id="menuButton" class="cursor-pointer">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 17H21M3 12H21M3 7H21"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+
+            <!-- Mobile Menu Overlay -->
+            <ul
+              id="mobileMenu"
+              class="flex flex-col gap-5 items-center fixed left-0 top-0 justify-center h-full w-full bg-[#fdc62f] hidden"
+            >
+              <!-- Close Button -->
+              <span
+                id="closeButton"
+                class="absolute top-[15px] right-[15px] cursor-pointer"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_10027_336)">
+                    <path
+                      d="M12.4395 1.43946C12.5772 1.2938 12.7428 1.17724 12.9264 1.09667C13.11 1.0161 13.3079 0.973148 13.5084 0.97036C13.7088 0.967572 13.9078 1.005 14.0936 1.08044C14.2794 1.15587 14.4481 1.26778 14.5899 1.40955C14.7316 1.55133 14.8436 1.72008 14.919 1.90584C14.9944 2.0916 15.0319 2.2906 15.0291 2.49107C15.0263 2.69155 14.9833 2.88943 14.9028 3.07302C14.8222 3.25661 14.7056 3.42219 14.56 3.55996L10.165 7.95496C10.1592 7.96077 10.1545 7.96766 10.1514 7.97526C10.1482 7.98285 10.1466 7.99099 10.1466 7.99921C10.1466 8.00743 10.1482 8.01557 10.1514 8.02316C10.1545 8.03076 10.1592 8.03765 10.165 8.04346L14.56 12.4385C14.7011 12.5773 14.8134 12.7427 14.8903 12.9252C14.9672 13.1077 15.0073 13.3036 15.0081 13.5016C15.0089 13.6996 14.9705 13.8958 14.8952 14.0789C14.8198 14.262 14.7089 14.4284 14.5689 14.5684C14.4289 14.7084 14.2626 14.8193 14.0795 14.8948C13.8964 14.9702 13.7002 15.0086 13.5022 15.0078C13.3042 15.0071 13.1083 14.9671 12.9258 14.8902C12.7433 14.8133 12.5779 14.7011 12.439 14.56L8.04397 10.165C8.03817 10.1591 8.03127 10.1545 8.02368 10.1514C8.01609 10.1482 8.00795 10.1466 7.99972 10.1466C7.9915 10.1466 7.98336 10.1482 7.97577 10.1514C7.96818 10.1545 7.96128 10.1591 7.95547 10.165L3.56047 14.56C3.42162 14.7011 3.25619 14.8134 3.07373 14.8903C2.89127 14.9672 2.69538 15.0073 2.49737 15.0081C2.29936 15.0089 2.10315 14.9705 1.92005 14.8952C1.73695 14.8198 1.57058 14.7089 1.43055 14.5689C1.29052 14.4289 1.1796 14.2625 1.10417 14.0795C1.02875 13.8964 0.990318 13.7002 0.991101 13.5022C0.991883 13.3042 1.03186 13.1083 1.10873 12.9258C1.1856 12.7433 1.29784 12.5778 1.43897 12.439L5.83397 8.04396C5.8398 8.03815 5.84441 8.03126 5.84756 8.02366C5.85071 8.01607 5.85234 8.00793 5.85234 7.99971C5.85234 7.99149 5.85071 7.98335 5.84756 7.97576C5.84441 7.96816 5.8398 7.96127 5.83397 7.95546L1.43897 3.56046C1.16142 3.27841 1.00656 2.89812 1.00812 2.50242C1.00969 2.10671 1.16755 1.72765 1.44733 1.44781C1.7271 1.16797 2.10612 1.01002 2.50183 1.00836C2.89753 1.0067 3.27786 1.16147 3.55997 1.43896L7.95497 5.83396C7.96078 5.83978 7.96768 5.8444 7.97527 5.84755C7.98286 5.8507 7.991 5.85232 7.99922 5.85232C8.00745 5.85232 8.01559 5.8507 8.02318 5.84755C8.03077 5.8444 8.03767 5.83978 8.04347 5.83396L12.4395 1.43946Z"
+                      fill="black"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_10027_336">
+                      <rect width="16" height="16" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+
+              <li>
+                <a href="https://speedyskiphire.co.uk/"> Home </a>
+              </li>
+              <li id="skipHireAccordion">
+                <button class="flex items-center gap-1 w-full">
+                  Skip Hire
+                  <span class="transform transition-transform duration-200">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7 10L12 15L17 10"
+                        stroke="black"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <ul class="hidden mt-2">
+                  <li>
+                    <a
+                      href="https://speedyskiphire.co.uk/domestic-skips/"
+                      class="block py-2"
+                    >
+                      Domestic Skips
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://speedyskiphire.co.uk/commercial-skips/"
+                      class="block py-2"
+                    >
+                      Commercial Skips
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://speedyskiphire.co.uk/skip-sizes/"
+                      class="block py-2"
+                    >
+                      Skip Sizes
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://speedyskiphire.co.uk/wait-and-load-skip-hire/"
+                      class="block py-2"
+                    >
+                      Wait and Load Skip Hire
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li id="clearanceAccordion">
+                <button class="flex items-center gap-1 w-full">
+                  Waste Clearance
+                  <span class="transform transition-transform duration-200">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7 10L12 15L17 10"
+                        stroke="black"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <ul class="hidden mt-2">
+                  <li>
+                    <a
+                      href="https://speedyskiphire.co.uk/house-clearance/"
+                      class="block py-2"
+                    >
+                      House Clearance
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://speedyskiphire.co.uk/office-clearance/"
+                      class="block py-2"
+                    >
+                      Office Clearance
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://speedyskiphire.co.uk/fly-tipping-clearance/"
+                      class="block py-2"
+                    >
+                      Fly Tipping Clearance
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="https://speedyskiphire.co.uk/areas-we-cover/"
+                  >Areas We Cover</a
+                >
+              </li>
+              <li>
+                <a
+                  class="relative px-8 ms-3 bg-white py-2.5 -skew-x-[30deg] flex gap-2 items-center hover:bg-black hover:text-white transition-all duration-200 ease-in-out"
+                  href="tel:08000093204"
+                >
+                  <strong class="inline-block skew-x-[30deg]"
+                    >0800 009 3204</strong
+                  >
+                  <span class="inline-block skew-x-[30deg]">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.2187 15C11.6087 15 10.7519 14.7793 9.46873 14.0625C7.90842 13.1875 6.70155 12.3796 5.14967 10.8318C3.65342 9.33652 2.9253 8.36839 1.90623 6.51402C0.754983 4.42027 0.951233 3.32277 1.17061 2.8537C1.43186 2.29308 1.81748 1.95777 2.31592 1.62495C2.59903 1.43947 2.89863 1.28046 3.21092 1.14995C3.24217 1.13652 3.27123 1.1237 3.29717 1.11214C3.45186 1.04245 3.68623 0.937142 3.98311 1.04964C4.18123 1.12402 4.35811 1.2762 4.63498 1.54964C5.2028 2.10964 5.97873 3.35683 6.26498 3.96933C6.45717 4.38214 6.58436 4.65464 6.58467 4.96027C6.58467 5.31808 6.40467 5.59402 6.18623 5.89183C6.1453 5.94777 6.10467 6.0012 6.0653 6.05308C5.82748 6.36558 5.7753 6.45589 5.80967 6.61714C5.87936 6.9412 6.39905 7.90589 7.25311 8.75808C8.10717 9.61027 9.04405 10.0971 9.36936 10.1665C9.53748 10.2025 9.62967 10.1481 9.95217 9.90183C9.99842 9.86652 10.0459 9.82995 10.0956 9.79339C10.4287 9.54558 10.6919 9.37027 11.0412 9.37027H11.0431C11.3472 9.37027 11.6075 9.50214 12.0387 9.71964C12.6012 10.0034 13.8859 10.7693 14.4494 11.3378C14.7234 11.614 14.8762 11.7903 14.9509 11.9881C15.0634 12.2859 14.9575 12.5193 14.8884 12.6756C14.8769 12.7015 14.864 12.73 14.8506 12.7615C14.7191 13.0733 14.5591 13.3722 14.3728 13.6546C14.0406 14.1515 13.704 14.5362 13.1422 14.7978C12.8537 14.9343 12.5379 15.0034 12.2187 15Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
@@ -253,6 +441,41 @@
       clearanceNavItem.addEventListener("mouseleave", () => {
         clearanceDropdownMenu.classList.add("hidden");
       });
+      const menuButton = document.getElementById("menuButton");
+      const closeButton = document.getElementById("closeButton");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const skipHireAccordion = document.getElementById("skipHireAccordion");
+      const clearanceAccordion = document.getElementById("clearanceAccordion");
+
+      // Toggle main menu
+      menuButton.addEventListener("click", () => {
+        mobileMenu.classList.remove("hidden");
+      });
+
+      closeButton.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+
+      // Accordion functionality
+      function setupAccordion(accordionElement) {
+        const button = accordionElement.querySelector("button");
+        const content = accordionElement.querySelector("ul");
+        const arrow = button.querySelector("span");
+
+        button.addEventListener("click", () => {
+          const isOpen = !content.classList.contains("hidden");
+
+          // Toggle content
+          content.classList.toggle("hidden");
+
+          // Rotate arrow
+          if (isOpen) {
+            arrow.style.transform = "rotate(0deg)";
+          } else {
+            arrow.style.transform = "rotate(180deg)";
+          }
+        });
+      }
     </script>
   </body>
 </html>
