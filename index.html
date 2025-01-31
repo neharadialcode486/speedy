@@ -66,12 +66,12 @@
         <div class="container mx-auto flex justify-between items-center px-5">
           <a href="/">
             <img
-              class="w-full md:max-w-[225px] max-w-[125px]"
+              class="w-full lg:max-w-[225px] max-w-[125px]"
               src="./assets/img/logo.png"
               alt="logo"
             />
           </a>
-          <ul class="hidden md:flex gap-5 items-center">
+          <ul class="hidden lg:flex gap-5 items-center">
             <li>
               <a href="https://speedyskiphire.co.uk/"> Home </a>
             </li>
@@ -229,7 +229,7 @@
               </a>
             </li>
           </ul>
-          <div class="md:hidden">
+          <div class="lg:hidden">
             <div id="menuButton" class="cursor-pointer">
               <svg
                 width="24"
@@ -251,7 +251,7 @@
             <!-- Mobile Menu Overlay -->
             <ul
               id="mobileMenu"
-              class="flex flex-col gap-5 items-center fixed left-0 top-0 justify-center h-full w-full bg-[#fdc62f] hidden"
+              class="flex-col gap-5 items-center fixed left-0 top-0 justify-center h-full w-full bg-[#fdc62f] hidden z-50"
             >
               <!-- Close Button -->
               <span
@@ -421,30 +421,74 @@
       </div>
     </nav>
     <!-- HERO -->
-    <section class="h-[650px] relative overflow-hidden">
-      <div class="multiple-items">
-        <div class="relative">
+    <section
+      class="xl:h-[650px] sm:h-[550px] h-[400px] relative overflow-hidden"
+    >
+      <button
+        class="hero-prev-arrow absolute sm:left-[20px] left-0 sm:top-[50%] top-[60%] translate-y-[-50%] z-10 drop-shadow-xl cursor-pointer"
+      >
+        <svg
+          class="rotate-[180deg] md:w-[40px] w-[30px]"
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M9.005 4L17.005 12L9.005 20L7 18L13.005 12L7 6L9.005 4Z"
+            fill="white"
+          />
+        </svg>
+      </button>
+      <button
+        class="hero-next-arrow absolute sm:right-[20px] right-0 sm:top-[50%] top-[60%] translate-y-[-50%] z-10 drop-shadow-xl cursor-pointer"
+      >
+        <svg
+          class="md:w-[40px] w-[30px]"
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M9.005 4L17.005 12L9.005 20L7 18L13.005 12L7 6L9.005 4Z"
+            fill="white"
+          />
+        </svg>
+      </button>
+      <div class="hero_slider">
+        <div class="relative overflow-hidden">
           <div
-            class="bg-black opacity-80 absolute h-[650px] w-full z-10 -skew-x-[30deg] left-[-45%] pointer-events-none"
+            class="bg-black opacity-80 absolute h-[650px] w-full z-10 xl:-skew-x-[30deg] xl:left-[-45%] pointer-events-none"
           ></div>
           <img
-            class="w-full object-cover h-[650px] absolute top-0 left-0 z-0"
+            class="w-full object-cover xl:h-[650px] sm:h-[550px] h-[400px] absolute top-0 left-0 z-0"
             src="./assets/img/hero-1.jpg"
             alt="hero-1"
           />
           <div
-            class="h-[650px] text-white z-[20] relative container mx-auto flex flex-col justify-center"
+            class="xl:h-[650px] sm:h-[550px] h-[400px] text-white z-[20] relative container mx-auto flex flex-col justify-center items-center xl:items-start px-2"
           >
-            <h2 class="text-[57px] font-normal leading-[1.1]">
+            <h2
+              class="xl:text-[57px] sm:text-[40px] text-[25px] font-normal leading-[1.1] text-center xl:text-start"
+            >
               <strong class="font-bold">Fast Reliable Skip Hire</strong
               ><br />Surrey &amp; Greater London
             </h2>
-            <p class="text-[22px] ff_cat pt-2 font-extralight">
+            <p
+              class="xl:text-[22px] sm:text-xl text-base ff_cat sm:pt-2 pt-3 font-extralight text-center xl:text-start"
+            >
               Reliably quick &amp; licenced skip hire that works around you
             </p>
             <div class="py-2 my-2">
               <button
-                class="font-bold text-lg text-black bg-[#fdc62f] hover:bg-white transition-all duration-200 ease-in-out py-3 px-6 -skew-x-[20deg] cursor-pointer"
+                class="font-bold sm:text-lg text-base text-black bg-[#fdc62f] hover:bg-white transition-all duration-200 ease-in-out sm:py-3 py-2 sm:px-6 px-4 -skew-x-[20deg] cursor-pointer"
               >
                 <span class="skew-x-[20deg] inline-block">
                   Check Your Postcode Now
@@ -452,7 +496,10 @@
               </button>
             </div>
             <p class="flex items-center gap-2">
-              <span class="text-[22px] ff_cat font-extralight">EXCELLENT </span>
+              <span
+                class="xl:text-[22px] sm:text-xl text-base ff_cat font-extralight"
+                >EXCELLENT
+              </span>
               <span class="flex">
                 <svg
                   width="24"
@@ -518,19 +565,209 @@
             </p>
           </div>
         </div>
-        <div>
+        <div class="relative overflow-hidden">
+          <div
+            class="bg-black opacity-80 absolute h-[650px] w-full z-10 xl:-skew-x-[30deg] xl:left-[-45%] pointer-events-none"
+          ></div>
           <img
-            class="w-full object-cover h-[650px]"
-            src="./assets/img/hero-2.jpg"
+            class="w-full object-cover xl:h-[650px] sm:h-[550px] h-[400px] absolute top-0 left-0 z-0"
+            src="./assets/img/hero-1.jpg"
             alt="hero-1"
           />
+          <div
+            class="xl:h-[650px] sm:h-[550px] h-[400px] text-white z-[20] relative container mx-auto flex flex-col justify-center items-center xl:items-start px-2"
+          >
+            <h2
+              class="xl:text-[57px] sm:text-[40px] text-[25px] font-normal leading-[1.1] text-center xl:text-start"
+            >
+              <strong class="font-bold">Wait & Load Skip Hire</strong
+              ><br />Surrey & Greater London
+            </h2>
+            <p
+              class="xl:text-[22px] sm:text-xl text-base ff_cat sm:pt-2 pt-3 font-extralight text-center xl:text-start"
+            >
+              Accredited & licenced wait & load skip hire
+            </p>
+            <div class="py-2 my-2">
+              <button
+                class="font-bold sm:text-lg text-base text-black bg-[#fdc62f] hover:bg-white transition-all duration-200 ease-in-out sm:py-3 py-2 sm:px-6 px-4 -skew-x-[20deg] cursor-pointer"
+              >
+                <span class="skew-x-[20deg] inline-block">
+                  Check Your Postcode Now
+                </span>
+              </button>
+            </div>
+            <p class="flex items-center gap-2">
+              <span
+                class="xl:text-[22px] sm:text-xl text-base ff_cat font-extralight"
+                >EXCELLENT
+              </span>
+              <span class="flex">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 17.275L7.85002 19.775C7.66669 19.8916 7.47502 19.9416 7.27502 19.9249C7.07502 19.9083 6.90002 19.8416 6.75002 19.725C6.60002 19.6083 6.48336 19.4626 6.40002 19.288C6.31669 19.1133 6.30002 18.9173 6.35002 18.7L7.45002 13.975L3.77502 10.8C3.60836 10.65 3.50436 10.479 3.46302 10.287C3.42169 10.095 3.43402 9.90762 3.50002 9.72495C3.56602 9.54229 3.66602 9.39228 3.80002 9.27495C3.93402 9.15762 4.11736 9.08262 4.35002 9.04995L9.20002 8.62495L11.075 4.17495C11.1584 3.97495 11.2877 3.82495 11.463 3.72495C11.6384 3.62495 11.8174 3.57495 12 3.57495C12.1827 3.57495 12.3617 3.62495 12.537 3.72495C12.7124 3.82495 12.8417 3.97495 12.925 4.17495L14.8 8.62495L19.65 9.04995C19.8834 9.08328 20.0667 9.15828 20.2 9.27495C20.3334 9.39162 20.4334 9.54162 20.5 9.72495C20.5667 9.90829 20.5794 10.096 20.538 10.288C20.4967 10.48 20.3924 10.6506 20.225 10.8L16.55 13.975L17.65 18.7C17.7 18.9166 17.6834 19.1126 17.6 19.288C17.5167 19.4633 17.4 19.609 17.25 19.725C17.1 19.841 16.925 19.9076 16.725 19.9249C16.525 19.9423 16.3334 19.8923 16.15 19.775L12 17.275Z"
+                    fill="#fdc62f"
+                  />
+                </svg>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 17.275L7.85002 19.775C7.66669 19.8916 7.47502 19.9416 7.27502 19.9249C7.07502 19.9083 6.90002 19.8416 6.75002 19.725C6.60002 19.6083 6.48336 19.4626 6.40002 19.288C6.31669 19.1133 6.30002 18.9173 6.35002 18.7L7.45002 13.975L3.77502 10.8C3.60836 10.65 3.50436 10.479 3.46302 10.287C3.42169 10.095 3.43402 9.90762 3.50002 9.72495C3.56602 9.54229 3.66602 9.39228 3.80002 9.27495C3.93402 9.15762 4.11736 9.08262 4.35002 9.04995L9.20002 8.62495L11.075 4.17495C11.1584 3.97495 11.2877 3.82495 11.463 3.72495C11.6384 3.62495 11.8174 3.57495 12 3.57495C12.1827 3.57495 12.3617 3.62495 12.537 3.72495C12.7124 3.82495 12.8417 3.97495 12.925 4.17495L14.8 8.62495L19.65 9.04995C19.8834 9.08328 20.0667 9.15828 20.2 9.27495C20.3334 9.39162 20.4334 9.54162 20.5 9.72495C20.5667 9.90829 20.5794 10.096 20.538 10.288C20.4967 10.48 20.3924 10.6506 20.225 10.8L16.55 13.975L17.65 18.7C17.7 18.9166 17.6834 19.1126 17.6 19.288C17.5167 19.4633 17.4 19.609 17.25 19.725C17.1 19.841 16.925 19.9076 16.725 19.9249C16.525 19.9423 16.3334 19.8923 16.15 19.775L12 17.275Z"
+                    fill="#fdc62f"
+                  />
+                </svg>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 17.275L7.85002 19.775C7.66669 19.8916 7.47502 19.9416 7.27502 19.9249C7.07502 19.9083 6.90002 19.8416 6.75002 19.725C6.60002 19.6083 6.48336 19.4626 6.40002 19.288C6.31669 19.1133 6.30002 18.9173 6.35002 18.7L7.45002 13.975L3.77502 10.8C3.60836 10.65 3.50436 10.479 3.46302 10.287C3.42169 10.095 3.43402 9.90762 3.50002 9.72495C3.56602 9.54229 3.66602 9.39228 3.80002 9.27495C3.93402 9.15762 4.11736 9.08262 4.35002 9.04995L9.20002 8.62495L11.075 4.17495C11.1584 3.97495 11.2877 3.82495 11.463 3.72495C11.6384 3.62495 11.8174 3.57495 12 3.57495C12.1827 3.57495 12.3617 3.62495 12.537 3.72495C12.7124 3.82495 12.8417 3.97495 12.925 4.17495L14.8 8.62495L19.65 9.04995C19.8834 9.08328 20.0667 9.15828 20.2 9.27495C20.3334 9.39162 20.4334 9.54162 20.5 9.72495C20.5667 9.90829 20.5794 10.096 20.538 10.288C20.4967 10.48 20.3924 10.6506 20.225 10.8L16.55 13.975L17.65 18.7C17.7 18.9166 17.6834 19.1126 17.6 19.288C17.5167 19.4633 17.4 19.609 17.25 19.725C17.1 19.841 16.925 19.9076 16.725 19.9249C16.525 19.9423 16.3334 19.8923 16.15 19.775L12 17.275Z"
+                    fill="#fdc62f"
+                  />
+                </svg>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 17.275L7.85002 19.775C7.66669 19.8916 7.47502 19.9416 7.27502 19.9249C7.07502 19.9083 6.90002 19.8416 6.75002 19.725C6.60002 19.6083 6.48336 19.4626 6.40002 19.288C6.31669 19.1133 6.30002 18.9173 6.35002 18.7L7.45002 13.975L3.77502 10.8C3.60836 10.65 3.50436 10.479 3.46302 10.287C3.42169 10.095 3.43402 9.90762 3.50002 9.72495C3.56602 9.54229 3.66602 9.39228 3.80002 9.27495C3.93402 9.15762 4.11736 9.08262 4.35002 9.04995L9.20002 8.62495L11.075 4.17495C11.1584 3.97495 11.2877 3.82495 11.463 3.72495C11.6384 3.62495 11.8174 3.57495 12 3.57495C12.1827 3.57495 12.3617 3.62495 12.537 3.72495C12.7124 3.82495 12.8417 3.97495 12.925 4.17495L14.8 8.62495L19.65 9.04995C19.8834 9.08328 20.0667 9.15828 20.2 9.27495C20.3334 9.39162 20.4334 9.54162 20.5 9.72495C20.5667 9.90829 20.5794 10.096 20.538 10.288C20.4967 10.48 20.3924 10.6506 20.225 10.8L16.55 13.975L17.65 18.7C17.7 18.9166 17.6834 19.1126 17.6 19.288C17.5167 19.4633 17.4 19.609 17.25 19.725C17.1 19.841 16.925 19.9076 16.725 19.9249C16.525 19.9423 16.3334 19.8923 16.15 19.775L12 17.275Z"
+                    fill="#fdc62f"
+                  />
+                </svg>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 17.275L7.85002 19.775C7.66669 19.8916 7.47502 19.9416 7.27502 19.9249C7.07502 19.9083 6.90002 19.8416 6.75002 19.725C6.60002 19.6083 6.48336 19.4626 6.40002 19.288C6.31669 19.1133 6.30002 18.9173 6.35002 18.7L7.45002 13.975L3.77502 10.8C3.60836 10.65 3.50436 10.479 3.46302 10.287C3.42169 10.095 3.43402 9.90762 3.50002 9.72495C3.56602 9.54229 3.66602 9.39228 3.80002 9.27495C3.93402 9.15762 4.11736 9.08262 4.35002 9.04995L9.20002 8.62495L11.075 4.17495C11.1584 3.97495 11.2877 3.82495 11.463 3.72495C11.6384 3.62495 11.8174 3.57495 12 3.57495C12.1827 3.57495 12.3617 3.62495 12.537 3.72495C12.7124 3.82495 12.8417 3.97495 12.925 4.17495L14.8 8.62495L19.65 9.04995C19.8834 9.08328 20.0667 9.15828 20.2 9.27495C20.3334 9.39162 20.4334 9.54162 20.5 9.72495C20.5667 9.90829 20.5794 10.096 20.538 10.288C20.4967 10.48 20.3924 10.6506 20.225 10.8L16.55 13.975L17.65 18.7C17.7 18.9166 17.6834 19.1126 17.6 19.288C17.5167 19.4633 17.4 19.609 17.25 19.725C17.1 19.841 16.925 19.9076 16.725 19.9249C16.525 19.9423 16.3334 19.8923 16.15 19.775L12 17.275Z"
+                    fill="#fdc62f"
+                  />
+                </svg>
+              </span>
+            </p>
+          </div>
         </div>
-        <div>
+        <div class="relative overflow-hidden">
+          <div
+            class="bg-black opacity-80 absolute h-[650px] w-full z-10 xl:-skew-x-[30deg] xl:left-[-45%] pointer-events-none"
+          ></div>
           <img
-            class="w-full object-cover h-[650px]"
-            src="./assets/img/hero-3.jpg"
+            class="w-full object-cover xl:h-[650px] sm:h-[550px] h-[400px] absolute top-0 left-0 z-0"
+            src="./assets/img/hero-1.jpg"
             alt="hero-1"
           />
+          <div
+            class="xl:h-[650px] sm:h-[550px] h-[400px] text-white z-[20] relative container mx-auto flex flex-col justify-center items-center xl:items-start px-2"
+          >
+            <h2
+              class="xl:text-[57px] sm:text-[40px] text-[25px] font-normal leading-[1.1] text-center xl:text-start"
+            >
+              <strong class="font-bold">Waste Clearance Services</strong
+              ><br />Surrey & Greater London
+            </h2>
+            <p
+              class="xl:text-[22px] sm:text-xl text-base ff_cat sm:pt-2 pt-3 font-extralight text-center xl:text-start"
+            >
+              Flexible & affordable waste management services
+            </p>
+            <div class="py-2 my-2">
+              <button
+                class="font-bold sm:text-lg text-base text-black bg-[#fdc62f] hover:bg-white transition-all duration-200 ease-in-out sm:py-3 py-2 sm:px-6 px-4 -skew-x-[20deg] cursor-pointer"
+              >
+                <span class="skew-x-[20deg] inline-block">
+                  Check Your Postcode Now
+                </span>
+              </button>
+            </div>
+            <p class="flex items-center gap-2">
+              <span
+                class="xl:text-[22px] sm:text-xl text-base ff_cat font-extralight"
+                >EXCELLENT
+              </span>
+              <span class="flex">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 17.275L7.85002 19.775C7.66669 19.8916 7.47502 19.9416 7.27502 19.9249C7.07502 19.9083 6.90002 19.8416 6.75002 19.725C6.60002 19.6083 6.48336 19.4626 6.40002 19.288C6.31669 19.1133 6.30002 18.9173 6.35002 18.7L7.45002 13.975L3.77502 10.8C3.60836 10.65 3.50436 10.479 3.46302 10.287C3.42169 10.095 3.43402 9.90762 3.50002 9.72495C3.56602 9.54229 3.66602 9.39228 3.80002 9.27495C3.93402 9.15762 4.11736 9.08262 4.35002 9.04995L9.20002 8.62495L11.075 4.17495C11.1584 3.97495 11.2877 3.82495 11.463 3.72495C11.6384 3.62495 11.8174 3.57495 12 3.57495C12.1827 3.57495 12.3617 3.62495 12.537 3.72495C12.7124 3.82495 12.8417 3.97495 12.925 4.17495L14.8 8.62495L19.65 9.04995C19.8834 9.08328 20.0667 9.15828 20.2 9.27495C20.3334 9.39162 20.4334 9.54162 20.5 9.72495C20.5667 9.90829 20.5794 10.096 20.538 10.288C20.4967 10.48 20.3924 10.6506 20.225 10.8L16.55 13.975L17.65 18.7C17.7 18.9166 17.6834 19.1126 17.6 19.288C17.5167 19.4633 17.4 19.609 17.25 19.725C17.1 19.841 16.925 19.9076 16.725 19.9249C16.525 19.9423 16.3334 19.8923 16.15 19.775L12 17.275Z"
+                    fill="#fdc62f"
+                  />
+                </svg>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 17.275L7.85002 19.775C7.66669 19.8916 7.47502 19.9416 7.27502 19.9249C7.07502 19.9083 6.90002 19.8416 6.75002 19.725C6.60002 19.6083 6.48336 19.4626 6.40002 19.288C6.31669 19.1133 6.30002 18.9173 6.35002 18.7L7.45002 13.975L3.77502 10.8C3.60836 10.65 3.50436 10.479 3.46302 10.287C3.42169 10.095 3.43402 9.90762 3.50002 9.72495C3.56602 9.54229 3.66602 9.39228 3.80002 9.27495C3.93402 9.15762 4.11736 9.08262 4.35002 9.04995L9.20002 8.62495L11.075 4.17495C11.1584 3.97495 11.2877 3.82495 11.463 3.72495C11.6384 3.62495 11.8174 3.57495 12 3.57495C12.1827 3.57495 12.3617 3.62495 12.537 3.72495C12.7124 3.82495 12.8417 3.97495 12.925 4.17495L14.8 8.62495L19.65 9.04995C19.8834 9.08328 20.0667 9.15828 20.2 9.27495C20.3334 9.39162 20.4334 9.54162 20.5 9.72495C20.5667 9.90829 20.5794 10.096 20.538 10.288C20.4967 10.48 20.3924 10.6506 20.225 10.8L16.55 13.975L17.65 18.7C17.7 18.9166 17.6834 19.1126 17.6 19.288C17.5167 19.4633 17.4 19.609 17.25 19.725C17.1 19.841 16.925 19.9076 16.725 19.9249C16.525 19.9423 16.3334 19.8923 16.15 19.775L12 17.275Z"
+                    fill="#fdc62f"
+                  />
+                </svg>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 17.275L7.85002 19.775C7.66669 19.8916 7.47502 19.9416 7.27502 19.9249C7.07502 19.9083 6.90002 19.8416 6.75002 19.725C6.60002 19.6083 6.48336 19.4626 6.40002 19.288C6.31669 19.1133 6.30002 18.9173 6.35002 18.7L7.45002 13.975L3.77502 10.8C3.60836 10.65 3.50436 10.479 3.46302 10.287C3.42169 10.095 3.43402 9.90762 3.50002 9.72495C3.56602 9.54229 3.66602 9.39228 3.80002 9.27495C3.93402 9.15762 4.11736 9.08262 4.35002 9.04995L9.20002 8.62495L11.075 4.17495C11.1584 3.97495 11.2877 3.82495 11.463 3.72495C11.6384 3.62495 11.8174 3.57495 12 3.57495C12.1827 3.57495 12.3617 3.62495 12.537 3.72495C12.7124 3.82495 12.8417 3.97495 12.925 4.17495L14.8 8.62495L19.65 9.04995C19.8834 9.08328 20.0667 9.15828 20.2 9.27495C20.3334 9.39162 20.4334 9.54162 20.5 9.72495C20.5667 9.90829 20.5794 10.096 20.538 10.288C20.4967 10.48 20.3924 10.6506 20.225 10.8L16.55 13.975L17.65 18.7C17.7 18.9166 17.6834 19.1126 17.6 19.288C17.5167 19.4633 17.4 19.609 17.25 19.725C17.1 19.841 16.925 19.9076 16.725 19.9249C16.525 19.9423 16.3334 19.8923 16.15 19.775L12 17.275Z"
+                    fill="#fdc62f"
+                  />
+                </svg>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 17.275L7.85002 19.775C7.66669 19.8916 7.47502 19.9416 7.27502 19.9249C7.07502 19.9083 6.90002 19.8416 6.75002 19.725C6.60002 19.6083 6.48336 19.4626 6.40002 19.288C6.31669 19.1133 6.30002 18.9173 6.35002 18.7L7.45002 13.975L3.77502 10.8C3.60836 10.65 3.50436 10.479 3.46302 10.287C3.42169 10.095 3.43402 9.90762 3.50002 9.72495C3.56602 9.54229 3.66602 9.39228 3.80002 9.27495C3.93402 9.15762 4.11736 9.08262 4.35002 9.04995L9.20002 8.62495L11.075 4.17495C11.1584 3.97495 11.2877 3.82495 11.463 3.72495C11.6384 3.62495 11.8174 3.57495 12 3.57495C12.1827 3.57495 12.3617 3.62495 12.537 3.72495C12.7124 3.82495 12.8417 3.97495 12.925 4.17495L14.8 8.62495L19.65 9.04995C19.8834 9.08328 20.0667 9.15828 20.2 9.27495C20.3334 9.39162 20.4334 9.54162 20.5 9.72495C20.5667 9.90829 20.5794 10.096 20.538 10.288C20.4967 10.48 20.3924 10.6506 20.225 10.8L16.55 13.975L17.65 18.7C17.7 18.9166 17.6834 19.1126 17.6 19.288C17.5167 19.4633 17.4 19.609 17.25 19.725C17.1 19.841 16.925 19.9076 16.725 19.9249C16.525 19.9423 16.3334 19.8923 16.15 19.775L12 17.275Z"
+                    fill="#fdc62f"
+                  />
+                </svg>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 17.275L7.85002 19.775C7.66669 19.8916 7.47502 19.9416 7.27502 19.9249C7.07502 19.9083 6.90002 19.8416 6.75002 19.725C6.60002 19.6083 6.48336 19.4626 6.40002 19.288C6.31669 19.1133 6.30002 18.9173 6.35002 18.7L7.45002 13.975L3.77502 10.8C3.60836 10.65 3.50436 10.479 3.46302 10.287C3.42169 10.095 3.43402 9.90762 3.50002 9.72495C3.56602 9.54229 3.66602 9.39228 3.80002 9.27495C3.93402 9.15762 4.11736 9.08262 4.35002 9.04995L9.20002 8.62495L11.075 4.17495C11.1584 3.97495 11.2877 3.82495 11.463 3.72495C11.6384 3.62495 11.8174 3.57495 12 3.57495C12.1827 3.57495 12.3617 3.62495 12.537 3.72495C12.7124 3.82495 12.8417 3.97495 12.925 4.17495L14.8 8.62495L19.65 9.04995C19.8834 9.08328 20.0667 9.15828 20.2 9.27495C20.3334 9.39162 20.4334 9.54162 20.5 9.72495C20.5667 9.90829 20.5794 10.096 20.538 10.288C20.4967 10.48 20.3924 10.6506 20.225 10.8L16.55 13.975L17.65 18.7C17.7 18.9166 17.6834 19.1126 17.6 19.288C17.5167 19.4633 17.4 19.609 17.25 19.725C17.1 19.841 16.925 19.9076 16.725 19.9249C16.525 19.9423 16.3334 19.8923 16.15 19.775L12 17.275Z"
+                    fill="#fdc62f"
+                  />
+                </svg>
+              </span>
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -541,10 +778,14 @@
     ></script>
 
     <script>
-      $(".multiple-items").slick({
+      $(".hero_slider").slick({
+        dots: true,
         infinite: true,
+        speed: 300,
         slidesToShow: 1,
         slidesToScroll: 1,
+        prevArrow: ".hero-prev-arrow",
+        nextArrow: ".hero-next-arrow",
       });
     </script>
     <script>
@@ -582,10 +823,12 @@
       // Toggle main menu
       menuButton.addEventListener("click", () => {
         mobileMenu.classList.remove("hidden");
+        mobileMenu.classList.add("flex");
       });
 
       closeButton.addEventListener("click", () => {
         mobileMenu.classList.add("hidden");
+        mobileMenu.classList.remove("flex");
       });
 
       // Accordion functionality
