@@ -379,110 +379,130 @@
               <li>
                 <a href="https://speedyskiphire.co.uk/"> Home </a>
               </li>
-              <li id="skipHireAccordion">
-                <button class="flex items-center gap-1 w-full">
-                  Skip Hire
-                  <span class="transform transition-transform duration-200">
+              <div class="max-w-2xl mx-auto space-y-4">
+                <!-- Accordion Item 1 -->
+                <div class="max-w-[200px] mx-auto">
+                  <button
+                    class="accordion-btn w-full flex justify-between items-center max-w-[100px] cursor-pointer mx-auto"
+                    onclick="toggleAccordion(this)"
+                  >
+                    <span class="text-base font-normal">Skip Hire</span>
                     <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
+                      class="w-4 h-4 transition-transform duration-200"
                       fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
                     >
                       <path
-                        d="M7 10L12 15L17 10"
-                        stroke="black"
-                        stroke-width="2.5"
                         stroke-linecap="round"
                         stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
                       />
                     </svg>
-                  </span>
-                </button>
-                <ul class="hidden mt-2">
-                  <li>
-                    <a
-                      href="https://speedyskiphire.co.uk/domestic-skips/"
-                      class="block py-2"
+                  </button>
+                  <div
+                    class="accordion-content max-h-0 overflow-hidden transition-all duration-200"
+                  >
+                    <ul
+                      id="dropdown-menu"
+                      class="w-48 py-2 mt-1 bg-white rounded-md shadow-lg"
                     >
-                      Domestic Skips
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://speedyskiphire.co.uk/commercial-skips/"
-                      class="block py-2"
-                    >
-                      Commercial Skips
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://speedyskiphire.co.uk/skip-sizes/"
-                      class="block py-2"
-                    >
-                      Skip Sizes
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://speedyskiphire.co.uk/wait-and-load-skip-hire/"
-                      class="block py-2"
-                    >
-                      Wait and Load Skip Hire
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li id="clearanceAccordion">
-                <button class="flex items-center gap-1 w-full">
-                  Waste Clearance
-                  <span class="transform transition-transform duration-200">
+                      <li>
+                        <a
+                          href="https://speedyskiphire.co.uk/domestic-skips/"
+                          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        >
+                          Domestic Skips
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://speedyskiphire.co.uk/commercial-skips/"
+                          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        >
+                          Commercial Skips
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://speedyskiphire.co.uk/skip-sizes/"
+                          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        >
+                          Skip Sizes
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://speedyskiphire.co.uk/wait-and-load-skip-hire/"
+                          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        >
+                          Wait and Load Skip Hire
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Accordion Item 2 -->
+                <div class="">
+                  <button
+                    class="accordion-btn w-full flex justify-between items-center max-w-[160px] mx-auto"
+                    onclick="toggleAccordion(this)"
+                  >
+                    <span class="text-base font-normal">Waste Clearance</span>
                     <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
+                      class="w-4 h-4 transition-transform duration-200"
                       fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
                     >
                       <path
-                        d="M7 10L12 15L17 10"
-                        stroke="black"
-                        stroke-width="2.5"
                         stroke-linecap="round"
                         stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
                       />
                     </svg>
-                  </span>
-                </button>
-                <ul class="hidden mt-2">
-                  <li>
-                    <a
-                      href="https://speedyskiphire.co.uk/house-clearance/"
-                      class="block py-2"
+                  </button>
+                  <div
+                    class="accordion-content max-h-0 overflow-hidden transition-all duration-200 max-w-[200px]"
+                  >
+                    <ul
+                      id="clearance-dropdown-menu"
+                      class="w-48 py-2 mt-1 bg-white rounded-md shadow-lg"
                     >
-                      House Clearance
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://speedyskiphire.co.uk/office-clearance/"
-                      class="block py-2"
-                    >
-                      Office Clearance
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://speedyskiphire.co.uk/fly-tipping-clearance/"
-                      class="block py-2"
-                    >
-                      Fly Tipping Clearance
-                    </a>
-                  </li>
-                </ul>
-              </li>
+                      <li>
+                        <a
+                          href="https://speedyskiphire.co.uk/house-clearance/"
+                          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          data-ps2id-api="true"
+                        >
+                          House Clearance
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://speedyskiphire.co.uk/office-clearance/"
+                          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          data-ps2id-api="true"
+                        >
+                          Office Clearance
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://speedyskiphire.co.uk/fly-tipping-clearance/"
+                          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          data-ps2id-api="true"
+                        >
+                          Fly Tipping Clearance
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
               <li>
                 <a href="https://speedyskiphire.co.uk/areas-we-cover/"
                   >Areas We Cover</a
@@ -2250,6 +2270,31 @@
 
         lastScrollTop = scrollTop;
       });
+    </script>
+    <script>
+      function toggleAccordion(button) {
+        // Get the content element
+        const content = button.nextElementSibling;
+        const arrow = button.querySelector("svg");
+
+        // Toggle active state
+        const isActive = content.style.maxHeight;
+
+        // Close all accordions
+        document.querySelectorAll(".accordion-content").forEach((item) => {
+          item.style.maxHeight = null;
+        });
+
+        document.querySelectorAll(".accordion-btn svg").forEach((svg) => {
+          svg.style.transform = "rotate(0deg)";
+        });
+
+        // If this accordion wasn't active, open it
+        if (!isActive) {
+          content.style.maxHeight = content.scrollHeight + "px";
+          arrow.style.transform = "rotate(180deg)";
+        }
+      }
     </script>
   </body>
 </html>
